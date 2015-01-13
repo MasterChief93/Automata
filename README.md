@@ -1,5 +1,5 @@
 # Automata
-Algoritms of Automata Theory
+Algorithms of Automata Theory
 - Elimination of Useless Symbols
 - Elimination of Epsilon Production
 - Elimination of Unit Production
