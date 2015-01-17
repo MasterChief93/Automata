@@ -23,8 +23,7 @@ def unitprod(term,nonterm,prod):
                 if pro not in queue:
                     queue.append(pro) # we can add to the queue the new unit-production
         if len(queue) == 0:
-            print useless_symbs(term,nonterm,prod)
-            return
+            return useless_symbs(term,nonterm,prod)
         # Then we pop the first one
         selected_prod = queue[0]
         # and reduce the queue
@@ -43,11 +42,13 @@ def unitprod(term,nonterm,prod):
         if queue == []:
             break
     # Elimination of every useless-symbols occured and return
-    print useless_symbs(term,nonterm,prod)
+    return useless_symbs(term,nonterm,prod)
 
 
-term = ["+","x",'(',')','a']
-nonterm = ["S","T","F"]
-prod = [["S","S+T"],["S","T"],["T","TxF"],["T","F"],["F","(S)"],["F","a"]]
+# term = ["+","x",'(',')','a']
+# nonterm = ["S","T","F"]
+# prod = [["S","S+T"],["S","T"],["T","TxF"],["T","F"],["F","(S)"],["F","a"]]
+#
+# unitprod(term,nonterm,prod)
 
-unitprod(term,nonterm,prod)
+
