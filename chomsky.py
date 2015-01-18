@@ -50,7 +50,7 @@ def chomsky(term,nonterm,prod):
         if check(R):
             break
 
-    print R
+    return [term,W,R]
     # for production in R:
 
 term = ["+","x",'(',')','a']
@@ -58,4 +58,4 @@ nonterm = ["S","T","F"]
 prod = [["S","S+T"],["S","T"],["T","TxF"],["T","F"],["F","(S)"],["F","a"]]
 
 
-chomsky(term,nonterm,prod)
+#print chomsky(term,nonterm,prod)
